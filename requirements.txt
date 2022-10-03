@@ -1,0 +1,11 @@
+bertopic
+flask
+gdown
+pandas
+pydantic
+numpy
+scikit-learn
+scipy
+sentence-transformers
+umap-learn
+Flask-Cors
