@@ -8,13 +8,13 @@ from load_model import get_models
 
 # load models globally
 get_models()
-if os.path.isfile('./models/model_climate_change'):
+if os.path.isfile('./climate_change_model'):
     response = "File exists"
     print(response)
 
     sentence_model = SentenceTransformer("paraphrase-MiniLM-L6-v2")
     model = select_backend(sentence_model)
-    climate_model = BERTopic.load("./models/model_climate_change", embedding_model=model)
+    climate_model = BERTopic.load("./climate_change_model", embedding_model=model)
 
 
 def preprocess(text):

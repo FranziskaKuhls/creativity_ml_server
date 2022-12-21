@@ -21,10 +21,13 @@ class Answer(BaseModel):
 app = Flask(__name__)
 
 
-
 origins = [
     "*"
 ]
+
+@app.route("/test", methods=['GET'])
+def home():
+    return "Hello flask"
 
 @app.route('/creativity', methods=['POST'])
 @cross_origin()
@@ -57,3 +60,6 @@ def load_models():
         get_models()
         response = "Downloaded files"
     return response
+    
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
